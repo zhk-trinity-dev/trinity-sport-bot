@@ -1,0 +1,18 @@
+[Unit]
+Description=Telegram Bot for Trinity Sport Schedules
+After=network.target
+
+[Service]
+Type=simple
+
+WorkingDirectory=/opt/trinity-sport-bot/
+ExecStart=.venv/bin/python3 main.py
+
+Restart=always
+RestartSec=5
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
