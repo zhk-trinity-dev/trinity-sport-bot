@@ -20,6 +20,7 @@ load_dotenv()
 TOKEN = os.getenv("BOT_TOKEN")
 GROUP_ID = int(os.getenv("GROUP_ID"))
 THREAD_ID = int(os.getenv("THREAD_ID", "0"))
+OWNER_ID = int(os.getenv("OWNER_ID"))  # Твой Telegram ID — только ты можешь менять админов
 
 bot = Bot(
     token=TOKEN,
@@ -30,7 +31,6 @@ bot = Bot(
 dp = Dispatcher()
 scheduler = AsyncIOScheduler()
 DATA_FILE = "data.json"
-OWNER_ID = 7775115089  # Твой Telegram ID — только ты можешь менять админов
 
 # --- Работа с данными ---
 def load_data():
