@@ -6,7 +6,7 @@ git pull origin main
 
 rm -rf .venv
 python3 -m venv .venv
-pip3 install -r requirements.txt
+.venv/bin/pip3 install -r requirements.txt
 
 rm -f .env && touch .env
 echo BOT_TOKEN=$BOT_TOKEN >> .env
